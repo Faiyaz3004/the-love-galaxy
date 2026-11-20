@@ -1,0 +1,289 @@
+.<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="theme-color" content="#090106">
+<title>THE LOVE GALAXY ♡𓂃</title>
+<style>
+:root{--void:#080106;--deep:#16030c;--maroon:#300513;--wine:#57091f;--ruby:#b80e38;--red:#ff174f;--rose:#ff5478;--pink:#ff9aad;--gold:#e8b8a2;--ivory:#fff0ed;--muted:#d5aab5}
+*{box-sizing:border-box}html,body{margin:0;width:100%;min-height:100%;background:var(--void);color:var(--ivory)}
+body{font-family:Georgia,"Times New Roman",serif;overflow:hidden;background:radial-gradient(ellipse at 50% 48%,#350817 0,#18040d 42%,#080106 82%)}
+button{font:inherit;cursor:pointer;-webkit-tap-highlight-color:transparent}
+#universe{position:fixed;inset:0;width:100%;height:100%;z-index:0;pointer-events:none}
+.ambient{position:fixed;inset:0;z-index:0;pointer-events:none;background:radial-gradient(ellipse at 50% 45%,transparent 10%,#08010655 65%,#030004 100%)}
+.noise{position:fixed;inset:0;z-index:1;pointer-events:none;opacity:.12;background-image:url("data:image/svg+xml,%3Csvg viewBox='0 0 180 180' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.8' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='.22'/%3E%3C/svg%3E")}
+.shell{position:relative;z-index:2;width:100%;height:100svh;min-height:560px;overflow:hidden}
+.header{position:absolute;z-index:10;top:0;left:0;right:0;display:flex;align-items:center;justify-content:space-between;padding:calc(20px + env(safe-area-inset-top)) clamp(17px,5vw,58px) 12px}
+.brand{font:600 .65rem/1.4 system-ui,sans-serif;letter-spacing:.28em;color:#f2b7c3}.chapter-label{font:.62rem system-ui,sans-serif;letter-spacing:.2em;color:#a97683;text-transform:uppercase}
+.rose-stage{position:absolute;left:50%;top:47%;width:min(92vw,650px);aspect-ratio:1;transform:translate(-50%,-50%);display:grid;place-items:center;pointer-events:none}
+#rose{width:100%;height:100%;overflow:visible;filter:drop-shadow(0 0 22px #e20a3b66)}
+.rose-halo{position:absolute;width:68%;height:68%;border-radius:50%;background:radial-gradient(circle,#e5093d20 0,#8c062b12 40%,transparent 70%);filter:blur(15px);animation:halo 5s ease-in-out infinite alternate}
+@keyframes halo{to{transform:scale(1.2);opacity:.65}}
+.ring{position:absolute;width:84%;height:84%;border:1px solid #ff557522;border-radius:50%;transform:rotateX(72deg) rotate(-18deg);box-shadow:0 0 25px #ed164122;animation:ring 22s linear infinite}
+.ring:before,.ring:after{content:"";position:absolute;width:5px;height:5px;border-radius:50%;background:#ff8da5;box-shadow:0 0 15px 5px #ff174f77}
+.ring:before{top:15%;left:18%}.ring:after{right:12%;bottom:20%}
+.ring.two{width:100%;height:100%;transform:rotateX(72deg) rotate(35deg);border-color:#ff557515;animation-duration:32s;animation-direction:reverse}
+@keyframes ring{to{rotate:360deg}}
+.content{position:relative;z-index:3;width:min(100%,650px);text-align:center;margin-top:12px;pointer-events:none}.content>*{pointer-events:auto}
+.kicker{font:600 .62rem system-ui,sans-serif;letter-spacing:.3em;text-transform:uppercase;color:#ff9bad;text-shadow:0 0 18px #ff174f66}
+h1{font-size:clamp(2.65rem,10.5vw,5.6rem);font-weight:400;line-height:.98;letter-spacing:-.055em;margin:19px 0 17px;text-shadow:0 4px 40px #080106}
+h1 em,h2 em{font-style:italic;color:#ff8ca4}
+h2{font-size:clamp(2.1rem,8vw,4rem);font-weight:400;line-height:1.02;letter-spacing:-.04em;margin:12px 0 18px;text-shadow:0 4px 35px #080106}
+.copy{font-size:1rem;line-height:1.8;color:#edcbd2;max-width:510px;margin:0 auto 23px;text-shadow:0 2px 15px #080106}
+.micro{font:.7rem/1.7 system-ui,sans-serif;letter-spacing:.08em;color:#d09aa8}
+.action{border:1px solid #ff7892a8;border-radius:4px 18px 4px 18px;padding:14px 23px;min-height:49px;color:#fff3f1;background:linear-gradient(120deg,#9d092fdd,#3b0719ee);box-shadow:0 0 30px #c20a3b30,inset 0 1px #ffffff20;letter-spacing:.04em;transition:.25s}
+.action:active{transform:scale(.97)}.action:hover{box-shadow:0 0 35px #ff174f55}.action.secondary{background:#17040de8;border-color:#b94b6677}
+.panel{width:min(100%,540px);margin:0 auto;padding:24px 23px;border:1px solid #d84a6a66;border-radius:3px 24px 3px 24px;background:linear-gradient(145deg,#380817e8,#14030bef);box-shadow:0 18px 60px #0009,0 0 35px #b70b3422;backdrop-filter:blur(12px)}
+.panel p{font-size:.98rem;line-height:1.85;color:#e8c2cb;margin:0 0 14px}.panel p:last-child{margin:0}.panel .accent{color:#ff9bad;font-style:italic}
+.pages{position:absolute;inset:0;z-index:4;pointer-events:none}
+.page{position:absolute;inset:0;display:flex;align-items:center;justify-content:center;padding:75px 22px 105px;opacity:0;visibility:hidden;transform:translateY(20px) scale(.985);transition:opacity .6s,transform .7s cubic-bezier(.2,.8,.2,1),visibility .6s;pointer-events:none}
+.page.active{opacity:1;visibility:visible;transform:none;pointer-events:auto}
+.page .content{pointer-events:none;max-height:100%;overflow-y:auto;scrollbar-width:none;padding:12px 2px}.page .content>*{pointer-events:auto}.page .content::-webkit-scrollbar{display:none}
+.rose-small{font-size:2.5rem;color:#ff4a70;text-shadow:0 0 22px #ff174f99;margin:2px 0 10px}
+.ornament{color:#ff6b8a;letter-spacing:.55em;font-size:1.1rem;margin:13px 0 18px}
+.reasons{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin:14px auto;width:min(100%,520px)}
+.reason{min-height:88px;text-align:left;padding:13px 14px;border:1px solid #b92d4f88;border-radius:3px 16px 3px 16px;background:linear-gradient(140deg,#4b0a20ed,#1a040def);color:#ffe8e9;transition:.2s}
+.reason:active{transform:scale(.97)}.reason[aria-expanded=true]{border-color:#ff829b;box-shadow:0 0 23px #ff174f33}
+.reason span{display:block;font-size:1.3rem;margin-bottom:5px}.reason b{font-size:.92rem;font-weight:400;color:#ff9aad}
+.detail{display:none;width:min(100%,520px);margin:0 auto 14px;padding:15px 17px;border:1px solid #d84a6a88;background:#18040df2;border-radius:3px 16px 3px 16px;animation:reveal .35s}
+.detail.open{display:block}.detail p{margin:0;color:#edcbd2;font-size:.92rem;line-height:1.75}
+@keyframes reveal{from{opacity:0;transform:translateY(9px)}to{opacity:1;transform:none}}
+.letter{display:none;margin:16px auto 0;animation:reveal .5s}.letter.open{display:block}
+.memory-frame{width:min(78vw,330px);aspect-ratio:4/4.6;margin:0 auto 14px;padding:10px;border:1px solid #e75a78;background:linear-gradient(145deg,#4d0a20,#16030b);box-shadow:0 0 35px #c20a3b33}
+.memory-inner{height:100%;display:grid;place-items:center;position:relative;overflow:hidden;background:radial-gradient(circle at 50% 35%,#71102d,#19040e 75%)}
+.memory-inner img{position:absolute;width:100%;height:100%;object-fit:cover}
+.placeholder{padding:18px;color:#e9bfc9;font:.8rem/1.8 system-ui,sans-serif}
+.memory-caption{font:.62rem system-ui,sans-serif;letter-spacing:.22em;color:#ff9bad;text-transform:uppercase}
+.footer-note{font:.65rem system-ui,sans-serif;color:#bd8997;letter-spacing:.12em;margin-top:17px}
+.bottom{position:absolute;z-index:12;bottom:calc(15px + env(safe-area-inset-bottom));left:0;right:0;display:flex;justify-content:center;align-items:center;gap:13px;padding:0 16px}
+.bottom button{min-width:106px}.bottom .back{min-width:82px}.bottom .back:disabled{opacity:.25;cursor:default}
+.count{min-width:45px;text-align:center;font:.65rem system-ui,sans-serif;letter-spacing:.16em;color:#d6a7b3}
+.progress{position:absolute;z-index:11;bottom:calc(68px + env(safe-area-inset-bottom));left:50%;transform:translateX(-50%);display:flex;gap:6px;width:min(210px,60vw)}
+.progress i{height:2px;flex:1;background:#ffffff22}.progress i.on{background:#ff5579;box-shadow:0 0 10px #ff174f}
+.petal{position:fixed;z-index:8;top:-35px;pointer-events:none;animation:fall linear forwards;color:#ff466d;text-shadow:0 0 12px #ff174f}
+@keyframes fall{to{transform:translate3d(var(--drift),110svh,0) rotate(520deg);opacity:0}}
+.toast{position:fixed;z-index:30;bottom:calc(105px + env(safe-area-inset-bottom));left:50%;transform:translate(-50%,12px);opacity:0;background:#260613;border:1px solid #e65b79;color:#ffe9eb;padding:10px 15px;border-radius:3px 14px 3px 14px;font:.76rem system-ui,sans-serif;transition:.3s;max-width:90%;text-align:center}
+.toast.show{opacity:1;transform:translate(-50%,0)}
+.rose-orbit{position:fixed;z-index:14;left:12px;top:12px;width:36px;height:36px;display:grid;place-items:center;pointer-events:none;transform:translate3d(0,0,0);animation:rose-travel 24s linear infinite;filter:drop-shadow(0 0 7px #ff174f) drop-shadow(0 0 15px #e5093d99)}
+.rose-orbit svg{width:100%;height:100%;overflow:visible;animation:rose-turn 5s linear infinite}
+.rose-orbit .petal-shape{fill:#e5093d;stroke:#ff9aad;stroke-width:1.1}.rose-orbit .rose-core{fill:#ffd5dc;filter:drop-shadow(0 0 4px #fff)}.rose-orbit .rose-spark{fill:#ff9aad}
+@keyframes rose-travel{0%,100%{transform:translate3d(0,0,0)}25%{transform:translate3d(calc(100vw - 60px),0,0)}50%{transform:translate3d(calc(100vw - 60px),calc(100svh - 60px),0)}75%{transform:translate3d(0,calc(100svh - 60px),0)}}
+@keyframes rose-turn{to{transform:rotate(360deg)}}
+@media(max-height:680px){.rose-stage{width:min(78vw,440px);top:46%}.page{padding-top:58px;padding-bottom:95px}h1{font-size:clamp(2.2rem,8vw,4rem)}h2{font-size:clamp(1.8rem,7vw,3rem)}.panel{padding:17px}.copy{margin-bottom:14px}.reasons{gap:7px;margin:8px auto}.reason{min-height:75px;padding:10px}}
+@media(prefers-reduced-motion:reduce){*,*::before,*::after{animation-duration:.01ms!important;animation-iteration-count:1!important;transition-duration:.01ms!important}}
+</style>
+</head>
+<body>
+<canvas id="universe"></canvas><div class="ambient"></div><div class="noise"></div>
+<audio id="bgMusic" loop preload="auto"><source src="music.mp3" type="audio/mpeg"></audio>
+<div class="shell" id="shell">
+<header class="header"><div class="brand">❛FAIYAZ ♡ SUMIYA❜</div><div class="chapter-label" id="chapter">MY LOVE UNIVERSE</div></header>
+<div class="rose-stage" aria-hidden="true"><div class="rose-halo"></div><div class="ring"></div><div class="ring two"></div><svg id="rose" viewBox="-300 -300 600 600" role="presentation"></svg></div>
+<main class="pages" id="pages">
+<section class="page active" data-name="MY LOVE FOR YOU"><div class="content">
+<div class="kicker">The flower made of infinity love</div><h1>In all the<br>infinite <em>darkness,</em><br>You Glow.</h1>
+<p class="copy">In this Starry Realm of My Heart – There lies a Wealth of Love, Affection, and Tenderness for you.</p>
+<button class="action" id="enter">Enter the Rose Universe&nbsp; ↗</button><div class="footer-note">LOOK CLOSER · LET THE UNIVERSE UNFOLD</div>
+</div></section>
+<section class="page" data-name=" A KIND OF MAGIC"><div class="content">
+<div class="kicker">01 / You've Came into My Life Unexpectedly, like Magic.</div><div class="rose-small">ꫂ❁</div><h2>Your Name is Written<br>In My <em>Heart ♡</em></h2>
+<div class="panel"><p>❛শুনেছিলাম সবার জীবনে একজন মানুষ আসে – যে কিনা জাদুর মতো হয়ে সে মানুষটির জীবনকে পরিবর্তন করে দেয়, মানুষটিকে ভালো থাকতে শেখার, আমার জীবনেও খুব এমন একজন এসেছে 😌❤️! যাকে আমি বড্ড ভালোবাসি ☺️🥰💝!❜</p><p class="accent">❛21 June 2026❜ এই দিনে তুমি আমার জীবনে ম্যাজিকের মতো এসেছিলে 🥰✨।</p></div>
+<div class="ornament">✦ · ❀ · ✦</div><button class="action" data-next>Follow the starlight&nbsp; →</button>
+</div></section>
+<section class="page" data-name="You're In My Heart"><div class="content">
+<div class="kicker">02 / What Lies Within My Heartbeat?</div><div class="rose-small">🌷</div><h2>I Feel You in<br>every <em>Heartbeat of Mine…</em>🥺🫀</h2>
+<div class="panel"><p>তুমি আমার প্রতিদিনের প্রেরণা, প্রতিটি নিঃশ্বাসের প্রশান্তি। দিনের ব্যস্ততা কিংবা নিস্তব্ধ রাতের একাকিত্বে, প্রতিটি মুহূর্তে তোমার অস্তিত্ব অনুভব করি। মনে হয় যে, তুমি অদৃশ্য কোনো মায়ার বন্ধনে আমাকে আগলে রেখেছো—আমার প্রতিটি অনুভূতির গভীরে, প্রতিটি হৃৎস্পন্দনের অনুরণনে। কখনো কখনো নিজেকে আমার মাঝে নয়, বরং তোমার মাঝেই খুঁজে পাই। আমার ভাবনার প্রতিটি অধ্যায়ে, স্বপ্নের প্রতিটি পাতায় যে নামটি নীরবে লেখা থাকে, সে নামটি শুধুই তুমি সুমাইয়া । তুমি আমার জীবনের সেই সুন্দর অনুভূতি, যাকে ভাষায় প্রকাশ করা যায় 🥺🫶</p><p class="accent">❛তুমি আমার প্রতিদিনের বিশেষ অভ্যাস যার আভাস না পেলে আমি হই চিন্তিত এবং হতাশ 🥺।</p></div>
+<div class="ornament">✧　✦　✧</div><button class="action" data-next>Discover the next orbit&nbsp; →</button>
+</div></section>
+<section class="page" data-name="A LETTER IN THE STARS"><div class="content">
+<div class="kicker">03 / A Letter to You Sumiya</div><div class="constellative"><h2>To My Once-in-Eternity,<br>The Poetry My Heart <em>Could Never Finish.</em></h2>
+<p class="copy">A few words are waiting inside. Open them whenever you're ready.</p><button class="action" id="openLetter">Unseal the letter&nbsp; 💌</button>
+<div class="panel letter" id="letter"><p>তোমার কাছে অনেক অনেক শুকরিয়া আমার— 
+এই অগোছালো জীবনে আসার জন্য,
+আমায় আপন করে নেয়ার জন্য,
+আমার হৃদয়ের সবচেয়ে কাছের মানুষ হওয়ার জন্য
+তোমার কাছে শুকরিয়া সুমু আমায় ভালোবাসার জন্য।
+তুমি জান তোমায় কতটা ভালোবাসি?
+তোমায় ভালোবাসার কোনো নির্দিষ্ট কারণ নেই আমার,
+কারণ খুঁজতে গেলে হয়তো হাজারটা কারণ পাব,
+অথচ ভালোবাসার কাছে সব কারণই বড্ড তুচ্ছ।
+তুমি আমার জীবনে এসেছো এক অদ্ভুত মায়া হয়ে,
+যেমন করে বসন্ত এসে রাঙিয়ে দেয় শূন্য প্রকৃতি,
+যেমন করে ভোরের প্রথম আলো—
+নীরবে ছুঁয়ে যায় ঘুমন্ত পৃথিবী,
+ঠিক তেমন করেই তুমি ছুঁয়ে গেছো আমার অস্তিত্ব।
+তোমার আগমনে আমার অনুভূতিরা—
+নতুন করে কবিতা লিখতে শিখেছে।
+তোমার হাসিতে আমি খুঁজে পাই—
+পৃথিবীর সমস্ত সৌন্দর্যের এক অপূর্ব সমাহার,
+তোমার চোখের গভীরতায় হারিয়ে যেতে ইচ্ছে করে,
+যেন সেখানে লুকিয়ে আছে আমার সমস্ত প্রশান্তি।
+তোমার কণ্ঠের প্রতিটি উচ্চারণ—
+আমার কাছে মায়াবী সুরের মতো,
+যা নিঃশব্দ হৃদয়েও সৃষ্টি করে ভালো লাগার অনুরণন।
+জানো সুমাইয়া?
+তোমাকে দেখার পর থেকে
+পৃথিবীর সৌন্দর্যকে নতুন করে চিনেছি।
+এখন আকাশের চাঁদ দেখলেও তোমার কথা মনে পড়ে,
+বৃষ্টির প্রতিটি ফোঁটায় তোমার স্পর্শ খুজি,
+কদমফুলের সুবাসে তোমার মায়া অনুভব করি।
+প্রকৃতির প্রতিটি সৌন্দর্য যেন—
+আমাকে তোমার কথাই মনে করিয়ে দেয়।
+তবে, আমি তোমাকে শুধু সুন্দর মুহূর্তে চাই না,
+চাই বিষণ্ন বিকেলের নীরবতায়,
+চাই ক্লান্ত দিনের শেষে একটুখানি প্রশান্তিতে,
+চাই জীবনের কঠিন অধ্যায়গুলোর প্রতিটি বাঁকে।
+যখন পৃথিবীটা খুব বেশি অচেনা মনে হবে,
+তখন তোমার পাশে বসে—
+নিঃশব্দে কাটিয়ে দিব এক সমুদ্র সময়।
+আমি তোমার কাছে আকাশসম প্রতিশ্রুতি চাই না,
+চাই না কোনো রূপকথার নিখুঁত গল্প।
+শুধু চাই, আমাদের অনুভূতিগুলো সত্য থাকুক,
+অভিমানগুলো ভালোবাসায় মিশে যাক,
+ভুল বোঝাবুঝিগুলো একদিন মুছে যাক,
+আর সময়ের পরিবর্তনেও—
+আমাদের পরস্পরের প্রতি মায়াটুকু অটুট থাকুক।
+আমি শুধু চাইনা তোমার পরিপূরক হয়ে থাকতে, 
+তুমি আমার বেস্টফ্রেন্ড ; আমার কিউটি বেস্টি
+তুমি আমার জীবনের সেই বিরল সুন্দর অধ্যায়,
+যেখানে বন্ধুত্বের পবিত্রতা আর—
+ভালোবাসার গভীরতা একই হৃদয়ে এসে মিশেছে।
+হয়তো আমি ভালো কবি নই,
+হয়তো আমার শব্দভান্ডারও সীমিত,
+তবুও তোমাকে নিয়ে লিখতে বসলে–
+শব্দেরা কেমন যেন অসীম হয়ে ওঠে।
+কলমের প্রতিটি কালিতে মিশে থাকে তোমার নাম,
+প্রতিটি কবিতার অলংকারে থাকে তোমার ছায়া,
+আর প্রতিটি অসমাপ্ত ছন্দে—
+লুকিয়ে থাকে তোমাকে আরও কিছু বলার আকাঙ্ক্ষা।
+কখনো যদি জানতে ইচ্ছে করে,
+আমার হৃদয়ের কতটুকু জায়গাজুড়ে তুমি আছো,
+তবে জেনে রেখো—
+তোমার জন্য আলাদা কোনো অধ্যায় নেই আমার,
+কারণ আমার পুরো গল্পটাই তোমাকে ঘিরে লেখা।
+তুমি সেই অনুভূতি,
+যাকে এক জীবনে লিখেও শেষ করা যাবে না।
+হাজারো মানুষের ভিড়ে তোমাকেই আলাদা মনে হয়,
+হাজারো পরিচয়ের মাঝে তোমাকেই আপন লাগে।
+জীবনের দীর্ঘ পথচলায় যদি কখনো
+সময় আমাদের সামনে কঠিন পরীক্ষা নিয়ে আসে,
+তবুও চাই, আমরা যেন একে অপরের অনুভূতির
+মর্যাদা দিতে কখনো ভুলে না যাই।
+আর যদি কোনোদিন তুমি প্রশ্ন করো,
+আমার কাছে ভালোবাসার সংজ্ঞা কী?
+আমি হয়তো কোনো অভিধানের পাতা খুলব না,
+কোনো বিখ্যাত কবির কবিতাও আবৃত্তি করব না।
+শুধু তোমার দিকে তাকিয়ে বলব—
+❛❛ ভালোবাসা মানে তুমি 🥺❤️!
+তোমার অস্তিত্বে মুগ্ধ হয়ে থাকা 🥰!
+ভালোবাসা মানে তোমার হাসিতে নিজের আনন্দ খুঁজে পাওয়া,
+তোমার স্বপ্নগুলোকে নিজের মুনাজাতে জায়গা দেওয়া।
+ভালোবাসা মানে হাজারো অনুভূতির ভিড়ে—
+বারবার, প্রতিবার, নিঃসংকোচে তোমাকেই বেছে নেওয়া।❜❜
+শেষ পর্যন্ত শুধু এটুকুই বলতে চাই,
+তুমি আমার জীবনের কোনো ক্ষণস্থায়ী আবেগ নও,
+তুমি আমার অনুভূতির সবচেয়ে সুন্দর উপাখ্যান।
+যে উপাখ্যানের শুরুতে রয়েছে মুগ্ধতা,
+প্রতিটি পাতায় রয়েছে গভীর ভালোবাসা,
+আর যার প্রতিটি আগামীতে—
+আমি তোমার সঙ্গে সুন্দর কিছু স্মৃতি রচনা করতে চাই।
+তুমি থেকো আমার জীবনের কবিতায়,
+আমি না হয় তোমার নামেই লিখে যাব প্রতিটি ছন্দ।
+যদি কোনোদিন আমার কলমের কালি ফুরিয়ে যায়,
+তবুও হৃদয়ের অনুভূতিতে তোমার গল্প লিখে যাব।
+কারণ, তোমাকে নিয়ে আমার মুগ্ধতার কোনো সমাপ্তি নেই 😌🤗💝</p><p class="accent">❛তুমি আমার হৃদয়ের সেই মহাকাব্য, যার প্রতিটি ছন্দে মিশে আছে আমার সমস্ত ভালোবাসা 𖹭❜<br>I LOVE YOU SUMMMUUU 🥺🥰❤️</p></div>
+<div style="height:14px"></div><button class="action secondary" data-next>One more little secret&nbsp; →</button>
+</div></section>
+<section class="page" data-name="FOUR LITTLE CONSTELLATIONS"><div class="content">
+<div class="kicker">04 / Why am I so obsessed with you?</div><h2>Four reasons<br>you <em>shine.</em></h2><p class="micro">TOUCH A CONSTELLATION TO REVEAL ITS LIGHT</p>
+<div class="reasons">
+<button class="reason" data-reason="0" aria-expanded="false"><span>😁</span><b>Your Dushtami</b></button>
+<button class="reason" data-reason="1" aria-expanded="false"><span>☺️</span><b>Your smile</b></button>
+<button class="reason" data-reason="2" aria-expanded="false"><span>🫶</span><b>The Way You Love</b></button>
+<button class="reason" data-reason="3" aria-expanded="false"><span>😌</span><b>Your Patience</b></button>
+</div>
+<div class="detail" id="detail" aria-live="polite"><p id="detailText"></p></div><button class="action" data-next>Keep this memory&nbsp; →</button>
+</div></section>
+<section class="page" data-name="A MOMENT TO KEEP"><div class="content">
+<div class="kicker">05 / A moment to keep in my heart</div><h2>Some Memories<br>Become <em>My Everything</em>🥰!</h2>
+<div class="memory-frame"><div class="memory-inner"><div class="placeholder">♡<br><b>Your favourite memory belongs here</b><br>Put a photo beside this HTML file and name it <span style="color:#ff91a8">our-photo.jpg</span>.</div><img src="our-photo.jpg" alt="A special memory" onerror="this.remove()"></div></div>
+<div class="memory-caption">তোমার হাতের পাতায় এঁকে দিলাম ভালোবাসার প্রথম কবিতা,
+<br>তুমি আমার শত জীবনের মায়া, হৃদয়ের শ্রেষ্ঠ পূর্ণতা 💝🌹!.</div><p class="copy" style="font-size:.88rem;margin-top:12px">
+তোমার বাড়ানো হাতেই খুঁজে পেলাম আমার পুরো পৃথিবী 🫠🫶!</p><button class="action" data-next>One Final Promise&nbsp; →</button>
+</div></section>
+<section class="page" data-name="STILL BLOOMING"><div class="content">
+<div class="kicker">06 / My Last Promise — Until Eternity.</div><div class="rose-small">♥</div><h2>Even stars fade.<br>Some feelings <em>bloom.</em></h2>
+<div class="panel"><p>তোকে কথা দিচ্ছি, সুম্মু – সময় বদলাবে, বয়স বাড়বে, জীবনের গল্পে অসংখ্য অধ্যায় যোগ হবে, তবুও তোর প্রতি আমার সম্মান, মায়া আর ভালোবাসাকে আমি কখনো বিন্দুমাত্র হারিয়ে যেতে দিব না। রাগ, অভিমান কিংবা যত দূরত্বে হোক, বিশ্বাসে—আমরা একে অপরকে আগলে রাখব। আজ তোর প্রতি আামর ভালোবাসা যতটুকু, আগামী ১০০ বছর পর এর পরিমাণ কয়েক শত কোটি গুণ বেশি থাকবে ইনশাআল্লাহ। ☺️💝 আর যদি কোনোদিন আমার অধ্যায়ের শেষ পৃষ্ঠা এসেও যায়, তবুও ইনশাআল্লাহ আমি পরজনমে তোকেই খুজে নিব এবং নিজের ভালোবাসা প্রকাশ করব 😇☺️❤️, আমার একটা ইচ্ছা আছে সুম্মু —আমি আমার শেষ নিশ্বাসটা তোর হাতে হাত রাইখা, তোর হাসিমুখ দেইখা চিরতরে চোখ বন্ধ করতে চাই। 🥺😌
+<br>ফাইয়াজ সবসময় সুমাইয়ার ☺️❤️🌹</p><p class="accent">I Loooooovvvvvveeeeee Yoooooouuuuuu Amar Jaanu 🥰, Amar Kolizar 🫀, Amar Jaanpakhi 🥺❤️🌹, Amar Poranpakhi ☺️✨, Amar Sesh Bhalobasha ☺️💝.</p></div>
+<div class="ornament">✦　❀　✦</div><button class="action" id="restart">Return to the beginning&nbsp; ↺</button><div class="footer-note">END OF THIS JOURNEY · NOT THE END OF WONDER</div>
+</div></section>
+</main>
+<div class="progress" id="progress"><i class="on"></i><i></i><i></i><i></i><i></i><i></i><i></i></div>
+<nav class="bottom"><button class="action secondary back" id="back" disabled>← Back</button><span class="count" id="count">01 / 07</span><button class="action" id="next">Next&nbsp; →</button></nav>
+</div>
+<div class="rose-orbit" aria-hidden="true"><svg viewBox="0 0 100 100"><g transform="translate(50 50)">
+<ellipse class="petal-shape" cx="0" cy="-19" rx="13" ry="23"/><ellipse class="petal-shape" cx="18" cy="-6" rx="13" ry="23" transform="rotate(72 18 -6)"/><ellipse class="petal-shape" cx="11" cy="17" rx="13" ry="23" transform="rotate(144 11 17)"/><ellipse class="petal-shape" cx="-11" cy="17" rx="13" ry="23" transform="rotate(216 -11 17)"/><ellipse class="petal-shape" cx="-18" cy="-6" rx="13" ry="23" transform="rotate(288 -18 -6)"/><circle class="rose-core" r="8"/><path class="rose-spark" d="M0-42 3-34 11-31 3-28 0-20 -3-28 -11-31 -3-34Z"/>
+</g></svg></div>
+<div class="toast" id="toast" role="status"></div>
+<script>
+(()=>{
+const svg=document.getElementById('rose'),NS='http://www.w3.org/2000/svg';
+let seed=82371;function rand(){seed=(seed*1664525+1013904223)>>>0;return seed/4294967296}
+const group=document.createElementNS(NS,'g');group.setAttribute('id','petal-cloud');svg.appendChild(group);
+function dot(x,y,r,fill,opacity){let c=document.createElementNS(NS,'circle');c.setAttribute('cx',x);c.setAttribute('cy',y);c.setAttribute('r',r);c.setAttribute('fill',fill);c.setAttribute('opacity',opacity);group.appendChild(c)}
+const colors=['#ff174f','#f20b43','#c90838','#ff496f','#ff8ba2','#9b082e','#f7a0ae'];
+for(let i=0;i<5200;i++){let t=rand()*Math.PI*2,layer=rand(),petal=Math.cos(5*t);let edge=70+125*Math.max(0,petal)+34*Math.sin(10*t+layer*2);let r=edge*Math.sqrt(layer),curl=22*Math.sin(3*t+layer*7)*(1-layer);let x=(r+curl)*Math.cos(t),y=(r+curl)*Math.sin(t)*.84;dot(x,y,.45+rand()*1.85,colors[Math.floor(rand()*colors.length)],.18+rand()*.78)}
+for(let i=0;i<1150;i++){let t=i*.105+rand()*.5,r=3+i*.105+rand()*7;dot(Math.cos(t)*r,Math.sin(t)*r*.82,.65+rand()*1.5,rand()>.45?'#ff9bad':'#ff285b',.35+rand()*.65)}
+const sparkGroup=document.createElementNS(NS,'g');svg.appendChild(sparkGroup);
+for(let i=0;i<130;i++){let a=rand()*Math.PI*2,r=205+rand()*70,c=document.createElementNS(NS,'circle');c.setAttribute('cx',Math.cos(a)*r);c.setAttribute('cy',Math.sin(a)*r*.84);c.setAttribute('r',.6+rand()*1.5);c.setAttribute('fill',rand()>.5?'#ff8ca4':'#ffd4d9');c.setAttribute('opacity',.25+rand()*.65);sparkGroup.appendChild(c)}
+let angle=0,last=0;function spin(t){if(!last)last=t;angle+=Math.min(40,t-last)*.0048;last=t;group.setAttribute('transform',`rotate(${angle} 0 0)`);sparkGroup.setAttribute('transform',`rotate(${-angle*.55} 0 0)`);requestAnimationFrame(spin)}requestAnimationFrame(spin);
+
+const canvas=document.getElementById('universe'),ctx=canvas.getContext('2d');let w,h,dpr,stars=[];
+function resize(){dpr=Math.min(devicePixelRatio||1,2);w=innerWidth;h=innerHeight;canvas.width=w*dpr;canvas.height=h*dpr;ctx.setTransform(dpr,0,0,dpr,0,0);stars=Array.from({length:Math.min(220,Math.floor(w*h/3400))},()=>({x:rand()*w,y:rand()*h,r:.3+rand()*1.25,a:.15+rand()*.7,p:rand()*6.28,s:.4+rand()*1.3}))}
+function draw(t){ctx.clearRect(0,0,w,h);for(let s of stars){ctx.globalAlpha=s.a*(.72+.28*Math.sin(t*.001*s.s+s.p));ctx.fillStyle='#ffdce4';ctx.beginPath();ctx.arc(s.x,s.y,s.r,0,Math.PI*2);ctx.fill()}ctx.globalAlpha=1;requestAnimationFrame(draw)}
+resize();requestAnimationFrame(draw);addEventListener('resize',resize,{passive:true});
+
+const pages=[...document.querySelectorAll('.page')],bars=[...document.querySelectorAll('#progress i')];
+let current=0;const back=document.getElementById('back'),next=document.getElementById('next'),count=document.getElementById('count'),chapter=document.getElementById('chapter');
+const bgMusic=document.getElementById('bgMusic');
+let musicStarted=false;
+function startMusic(){
+ if(musicStarted)return;
+ bgMusic.volume=.7;
+ const playPromise=bgMusic.play();
+ if(playPromise!==undefined){
+  playPromise.then(()=>{musicStarted=true;}).catch(()=>{
+   toast('Tap once to allow the background music ♡');
+  });
+ }
+}
+function update(){pages.forEach((p,i)=>p.classList.toggle('active',i===current));bars.forEach((b,i)=>b.classList.toggle('on',i===current));back.disabled=current===0;count.textContent=String(current+1).padStart(2,'0')+' / 07';next.textContent=current===6?'Again ↺':'Next →';chapter.textContent=pages[current].dataset.name;pages[current].querySelector('.content').scrollTop=0}
+function go(n){if(n<0||n>=pages.length||n===current)return;current=n;update();if(current===1)startMusic();sparkBurst(innerWidth/2,innerHeight*.5,16)}
+function sparkBurst(x,y,n){for(let i=0;i<n;i++){let s=document.createElement('b');s.textContent='✦';s.style.cssText=`position:fixed;z-index:20;pointer-events:none;left:${x}px;top:${y}px;color:#ff829b;text-shadow:0 0 12px #ff174f;font-size:${7+Math.random()*10}px;transition:transform .8s,opacity .8s`;document.body.appendChild(s);let a=Math.random()*Math.PI*2,d=25+Math.random()*95;requestAnimationFrame(()=>{s.style.transform=`translate(${Math.cos(a)*d}px,${Math.sin(a)*d}px) scale(0)`;s.style.opacity=0});setTimeout(()=>s.remove(),900)}}
+function petals(n){for(let i=0;i<n;i++){let p=document.createElement('span');p.className='petal';p.textContent=['✿','❀','♥','✧'][Math.floor(Math.random()*4)];p.style.left=Math.random()*100+'vw';p.style.fontSize=(12+Math.random()*14)+'px';p.style.setProperty('--drift',(Math.random()*140-70)+'px');p.style.animationDuration=(5+Math.random()*5)+'s';document.body.appendChild(p);setTimeout(()=>p.remove(),11000)}}
+function toast(msg){let t=document.getElementById('toast');t.textContent=msg;t.classList.add('show');setTimeout(()=>t.classList.remove('show'),2300)}
+document.getElementById('enter').addEventListener('click',()=>{petals(18);go(1)});
+document.querySelectorAll('[data-next]').forEach(b=>b.addEventListener('click',()=>go(current+1)));
+back.addEventListener('click',()=>go(current-1));next.addEventListener('click',()=>current===6?go(0):go(current+1));document.getElementById('restart').addEventListener('click',()=>{petals(20);go(0)});
+document.getElementById('openLetter').addEventListener('click',()=>{let l=document.getElementById('letter');l.classList.toggle('open');document.getElementById('openLetter').textContent=l.classList.contains('open')?'Fold the letter ✧':'Unseal the letter ✧';if(l.classList.contains('open')){petals(12);sparkBurst(innerWidth/2,innerHeight*.55,22)}});
+const reasons=[
+  'তুই অনেক বেশি দুষ্টু ! 😭😁 কিন্তু জানিস, তোর এই দুষ্টামিগুলোই আমার বড্ড ভালো লাগে! 😫❤️ তুই আমার সাথে আরও বেশি বেশি দুষ্টামি করবি, আমাকে জ্বালাবি, বিরক্ত করবি, সুযোগ পেলেই গুতাগুতি করবি! পারলে আমাকে আরও বেশি বেশি আছাড় দিবি, আমার সাথে ঝগড়া করবি, আবার নিজেই এসে ভাব নিবি! 😭😂 আমার পেছনে লাগবি, আমার মাথা খাবি 🥹',
+
+  'আর তোর ওই মিষ্টি হাসিটা! 🥹❤️ জানিস, তুই যখন হাসিস, তখন মনে হয় পৃথিবীর সমস্ত সৌন্দর্য যেন এক মুহূর্তে তোর ঠোঁটে আইসা পরছে! তোর ওই হাসির সামনে সব কিছু ফ্যাকাশে হয়ে যায়। তাই তো চাই, তুই সবসময় এমন করেই হাসবি, প্রাণ খুলে হাসবি, আর তোর ওই মায়াবী হাসি দিয়ে আমার প্রতিটা দিন একটু একটু করে সুন্দর করে দিবি। বিশ্বাস কর সুম্মু, তোর হাসির চেয়ে প্রিয় কোনো দৃশ্য আমার কাছে নাই! 😫❤️',
+
+  'জানিস, তোর ভালোবাসার সবচেয়ে সুন্দর দিকটা হলো, তুই আমাকে শুধু ভালোবাসিস না, বরং তোর প্রতিদিনের ছোট ছোট যত্নে আমাকে ভীষণ আপন করে আগলে রাখিস! প্রতিদিন সকালে তোর সেই মিষ্টি সালাম আর Good Morning দিয়ে আমার দিনটার শুরু হয়, আবার রাতের শেষে তোর সালাম আর Good Night না পাওয়া পর্যন্ত যেন দিনটাই পূর্ণতা পায় না। আমার খাওয়া-দাওয়া ঠিকমতো হচ্ছে কি না কখনো কখনো আদর করে বুঝিয়ে দিস 😭❤️ তোর বকাঝকা করা, ভালোবাসা দিয়ে আগলে রাখার প্রতিটি মুহূর্ত আমার কাছে ভীষণ মূল্যবান। জানিস, তোর এই ছোট্ট ছোট্ট অভ্যাসগুলোই আমার কাছে ভালোবাসার সবচেয়ে সুন্দর সংজ্ঞা। হয়তো সবসময় মুখে প্রকাশ করিস না, কিন্তু তোর প্রতিটি যত্নে আমি অনুভব করি, কেউ একজন আমাকে নিয়ে এতটা ভাবে, আমার ভালো থাকা নিয়ে এতটা চিন্তা করে। আর সত্যি বলতে, তোর এই মায়াভরা ভালোবাসার মধ্যে আমি এমন এক প্রশান্তি খুঁজে পাই, যেটা হাজারো সুন্দর মুহূর্তের মাঝেও পাওয়া যায় না। তুই এভাবেই আমার খেয়াল রাখিস, তবে আমি চাই তুই অধিকার দেখিয়ে শাসন কর আমাকে, আমার কাছে বায়না কর, একটু বেশি আদর কর আমাকে 😭🫴 কিন্তু সবসময় এভাবে আমাকে শাসন করিস, আর তোর এই মায়া দিয়ে সারাজীবন আগলে রাখিস। 🥹❤️',
+
+  'জানিস, তোর ধৈর্যশীলতার জায়গাটা আমাকে সবচেয়ে বেশি মুগ্ধ করে! আমি কতবার যে অকারণে রাগ করি, অভিমান করি, ছোটখাটো বিষয় নিয়ে মন খারাপ করে বসে থাকি, তার কোনো হিসাব নেই! অথচ তুই প্রতিবারই নিজের অভিমানটুকু সরিয়ে রেখে আমাকে মানানোর চেষ্টা করিস। জীবনে এই প্রথম কোনো ছেলের রাগ-অভিমান এতটা ধৈর্য নিয়ে নিজের ইচ্ছায় সামলাতে শিখেছিস, আর সেই মানুষটা যে আমি—এটা ভাবতেই কেমন যেন এক অদ্ভুত ভালো লাগা কাজ করে! 🥹❤️ তোর নিজের পরিবার, চারপাশের এত ব্যস্ততা, সবার বকাঝকা কিংবা নানা পরিস্থিতির মাঝেও তুই আমার জন্য সময় বের করিস, আমার সঙ্গে কথা বলিস, আমার মন ভালো রাখার চেষ্টা করিস। কখনো নিজের সুবিধার কথা না ভেবে আমার অনুভূতিগুলোকে গুরুত্ব দিস। সবচেয়ে বেশি ভালো লাগে, তুই আমাকে যেভাবে সম্মান করিস, আমার কথাকে মূল্য দিস এবং আমার অনুভূতির প্রতি যত্নশীল থাকিস। তোর এই ধৈর্য, সম্মানবোধ আর বুঝতে পারার ক্ষমতা আমাকে প্রতিনিয়ত নতুন করে মুগ্ধ করে। হয়তো আমি সবসময় তোর এই প্রচেষ্টাগুলোর যথাযথ প্রশংসা করতে পারি না, আজ তোকে অনেক অনেক অনেক বেশি শুকরিয়া ☺️🌹। কিন্তু বিশ্বাস কর, তোর প্রতিটি ছোট্ট চেষ্টা আমার হৃদয়ে ভীষণ যত্নে জমা থাকে। তুই শুধু আমার রাগ-অভিমান সহ্য করিস না, বরং নিজের ধৈর্য আর ভালোবাসা দিয়ে আমাকে বুঝিয়ে দিস, একজন মানুষের কাছে আরেকজন মানুষ কতটা মূল্যবান হতে পারে 🥺! আর তোর এই সুন্দর মনটার জন্যই তোকে এতটা সম্মান করি, এতটা ভালোবাসি। 🥹❤️'
+];
+
+let reasonButtons=[...document.querySelectorAll('[data-reason]')],
+detail=document.getElementById('detail');
+reasonButtons.forEach(b=>b.addEventListener('click',()=>{let was=b.getAttribute('aria-expanded')==='true';reasonButtons.forEach(x=>x.setAttribute('aria-expanded','false'));if(was){detail.classList.remove('open');return}b.setAttribute('aria-expanded','true');document.getElementById('detailText').textContent=reasons[+b.dataset.reason];detail.classList.remove('open');void detail.offsetWidth;detail.classList.add('open');sparkBurst(innerWidth/2,innerHeight*.55,12)}));
+let sx=0,sy=0;document.getElementById('shell').addEventListener('touchstart',e=>{sx=e.changedTouches[0].clientX;sy=e.changedTouches[0].clientY},{passive:true});
+document.getElementById('shell').addEventListener('touchend',e=>{let dx=e.changedTouches[0].clientX-sx,dy=e.changedTouches[0].clientY-sy;if(Math.abs(dx)>70&&Math.abs(dx)>Math.abs(dy)*1.3)go(current+(dx<0?1:-1))},{passive:true});
+update();
+})();
+</script>
+</body>
+</html>
